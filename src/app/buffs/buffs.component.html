@@ -14,7 +14,7 @@
                 </thead>
                 <tbody>
 
-                    @for (level of levelsToIterate; track level) {
+                    @for (level of levelsToIterateNewbie; track level) {
                     <tr>
                         <td class="px-4">{{ level }}</td>
                         <td class="px-4">
@@ -33,10 +33,8 @@
             </table>
         </div>
 
-
         <div>
             <div class="pb-2">Warrior</div>
-
             <table class="table-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
@@ -46,7 +44,7 @@
                 </thead>
                 <tbody>
 
-                    @for (level of levelsToIterate; track level) {
+                    @for (level of levelsToIterateNewbie; track level) {
                     <tr>
                         <td class="px-4">{{ level }}</td>
                         <td class="px-4">
@@ -63,5 +61,55 @@
                 </tbody>
             </table>
         </div>
+    </div>
+
+    <div class="text-lg font-semibold pt-5 pb-2">Buffers</div>
+
+    <div class="grid grid-cols-11">
+        <div class="pl-2 border font-semibold text-gray-700 bg-gray-50">Level</div>
+        <div class="pl-2 col-span-2 border font-semibold text-gray-700 bg-gray-50">Prophet</div>
+        <div class="pl-2 col-span-2 border font-semibold text-gray-700 bg-gray-50">Shillen Elder</div>
+        <div class="pl-2 col-span-2 border font-semibold text-gray-700 bg-gray-50">Elven Elder</div>
+        <div class="pl-2 col-span-2 border font-semibold text-gray-700 bg-gray-50">Overlord</div>
+        <div class="pl-2 col-span-2 border font-semibold text-gray-700 bg-gray-50">Warcryer</div>
+        @for (level of levelsToIterateBuffers; track level) {
+            <div class="border pl-2">{{ level }}</div>
+            <div class="col-span-2 border pl-2">
+                @for (buff of PP_BUFFS; track buff.name) {
+                    @if (buff.minLevel == level) {
+                       <div>{{ buff.name }} - lvl {{ buff.buffLevel }}</div>
+                    }
+                }
+            </div>
+            <div class="col-span-2 border pl-2">
+                @for (buff of SE_BUFFS; track buff.name) {
+                    @if (buff.minLevel == level) {
+                       <div>{{ buff.name }} - lvl {{ buff.buffLevel }}</div>
+                    }
+                }
+            </div>
+            <div class="col-span-2 border pl-2">
+                @for (buff of EE_BUFFS; track buff.name) {
+                    @if (buff.minLevel == level) {
+                       <div>{{ buff.name }} - lvl {{ buff.buffLevel }}</div>
+                    }
+                }
+            </div>
+            <div class="col-span-2 border pl-2">
+                @for (buff of OL_BUFFS; track buff.name) {
+                    @if (buff.minLevel == level) {
+                       <div>{{ buff.name }} - lvl {{ buff.buffLevel }}</div>
+                    }
+                }
+            </div>
+            <div class="col-span-2 border pl-2">
+                @for (buff of WC_BUFFS; track buff.name) {
+                    @if (buff.minLevel == level) {
+                       <div>{{ buff.name }} - lvl {{ buff.buffLevel }}</div>
+                    }
+                }
+            </div>
+        }
+
     </div>
 </div>

@@ -23,6 +23,13 @@ export const WARRIOR_NEWBIE_GUIDE_BUFFS: NewbieGuideBuff[] = [
         icon: 'shield'
     },
     {
+        minLevel: 12,
+        maxLevel: 22,
+        name: 'Bless the Body For Novice',
+        description: 'Temporarily increases maximum HP. Effect 6.',
+        icon: 'btb'
+    },
+    {
         minLevel: 13,
         maxLevel: 21,
         name: 'Vampiric Rage For Novice',
@@ -44,7 +51,7 @@ export const WARRIOR_NEWBIE_GUIDE_BUFFS: NewbieGuideBuff[] = [
         icon: 'haste'
     },
     {
-        minLevel: 15,
+        minLevel: 16,
         maxLevel: 19,
         name: 'Life Cubic For Novice',
         description: 'Temporarily increases Atk. Spd. Effect 1.',
@@ -96,7 +103,7 @@ export const MAGE_NEWBIE_GUIDE_BUFFS: NewbieGuideBuff[] = [
         icon: 'empower'
     },
     {
-        minLevel: 15,
+        minLevel: 16,
         maxLevel: 19,
         name: 'Life Cubic For Novice',
         description: 'Temporarily increases Atk. Spd. Effect 1.',
